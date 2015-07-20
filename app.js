@@ -1,15 +1,24 @@
 #!/usr/bin/env node
 var fs = require('fs');
 
-var argv = require('yargs')
-  .argv;
+var argv = require('yargs').argv;
 
 var prompt = require('prompt')
 
 var help = require('./app/help');
 
+var zipFile = require('./app/zipfile');
+
 if (argv.help){
   help();
+}
+
+if (argv.file){
+  zipFile(argv.file);
+}
+
+if (argv.csv){
+  csvToJson(argv.csv);
 }
 
 prompt.override = argv;
@@ -23,10 +32,8 @@ prompt.get('name', function (err, result) {
 
 function printHelloMessage(name){
   console.log('hello ' + name);
-  //print the big file
-  var options = {encoding: 'utf8'}
-  var bigNum = fs.readFileSync('./app/bigfile', options);
-  console.log(bigNum);
+  var bigNum = fs.createReadStream('./app/bigfile');
+  bigNum.pipe(process.stdout)
   process.stdout.write('Hello ' + name + ' Again!\n');
 }
 
