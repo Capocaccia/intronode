@@ -1,0 +1,7 @@
+V1.0.0
+intronode
+
+usage:
+
+--help     print out this message
+--name={name}     input name

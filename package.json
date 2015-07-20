@@ -1,0 +1,23 @@
+{
+  "name": "intronode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Capocaccia/intronode.git"
+  },
+  "author": "Carter Capocaccia <carter.capocaccia@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Capocaccia/intronode/issues"
+  },
+  "homepage": "https://github.com/Capocaccia/intronode#readme",
+  "dependencies": {
+    "prompt": "^0.2.14",
+    "yargs": "^3.15.0"
+  }
+}
