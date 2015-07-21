@@ -32,9 +32,9 @@ prompt.get('name', function (err, result) {
 
 function printHelloMessage(name){
   console.log('hello ' + name);
-  var bigNum = fs.createReadStream('./app/bigfile');
-  bigNum.pipe(process.stdout)
   process.stdout.write('Hello ' + name + ' Again!\n');
+  // var bigNum = fs.createReadStream('./app/bigfile');
+  // bigNum.pipe(process.stdout)
 }
 
 // process.exit(1);
